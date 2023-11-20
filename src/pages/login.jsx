@@ -46,7 +46,13 @@ const Login = () => {
     }
 
     return (
-        <div className={style.loginContainer}>
+        <section>
+            <main>
+                <article>
+                    <div>
+
+                    </div>
+                    <div className={style.loginContainer}>
             <h1 className={`${getClassname()}`} >Login Page</h1>
             <p>Enter username</p>
             <div className={style.inputContainer}>
@@ -55,6 +61,13 @@ const Login = () => {
             </div>
             {displayError()}
         </div>
+                </article>
+            </main>
+            <footer>
+
+            </footer>
+        </section>
+
     )
 }
 
