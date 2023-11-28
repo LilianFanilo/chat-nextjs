@@ -28,13 +28,16 @@ const UserList = ({ users, setUsers, selectedUser, setSelectedUser }) => {
   return (
     <div ref={listRef} className={style.userlist}>
       <div className={style.userlistTop}>
+        <span>
           Direct
+        </span>
+        <img src="./images/homeSection/pen.svg" alt="" />
       </div>
       <div
         className={`${style.user} ${selectedUser ? "" : style.user__active}`}
         onClick={() => setSelectedUser(null)}
       >
-        Général
+        GENERAL
       </div>
       {users.map((user) => {
         return user.connected === true ? (

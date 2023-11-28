@@ -12,16 +12,32 @@ const Message = ({ username, content, fromSelf }) => {
     });
   });
 
-  return (
-    <div
+  if (!fromSelf) {
+    return (
+      <div className={style.usersMessages}>
+        <img src="./images/default_pfp.svg" alt="" />
+          <div
+          ref={messageRef}
+          className={`${style.message}`}
+        >
+          <span>
+            {username} : {content}
+          </span>
+        </div>
+      </div>
+    )
+  } else {
+    return (
+      <div
       ref={messageRef}
-      className={`${style.message} ${fromSelf ? style.message__self : ""}`}
+      className={`${style.message} ${style.message__self}`}
     >
       <span>
         {username} : {content}
       </span>
     </div>
-  );
+    )
+  }
 };
 
 export default Message;

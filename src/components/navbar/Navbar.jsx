@@ -4,16 +4,17 @@ const Navbar = () => {
   return (
     <nav className={style.navbar}>
       <div>
-        <img src="./images/instalogo.png" alt="" />
+        <img className={style.logo} src="./images/instalogo.png" alt="" />
       </div>
       <div>
-        <input type="text" name="" id="" />
+        <input type="text" name="" id="" placeholder="Search"/>
       </div>
       <div>
         <img src="./images/navbar/home.png" alt=""/>
         <img src="./images/navbar/message.png" alt="" />
         <img src="./images/navbar/search.png" alt="" />
         <img src="./images/navbar/like.png" alt="" />
+        <img className={style.pfpImg} src="./images/default_pfp.svg" alt="" />
       </div>
     </nav>
   );

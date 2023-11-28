@@ -28,7 +28,8 @@ const User = ({ user, selectedUser, setSelectedUser, resetNotification }) => {
       }}
     >
 
-      <span className={style.userImg}></span>
+      {/* <span className={style.userImg}></span> */}
+      <img className={style.userImg} src="./images/default_pfp.svg" alt="" />
 
       {user.username}
 

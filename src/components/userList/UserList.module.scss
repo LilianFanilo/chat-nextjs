@@ -9,9 +9,17 @@
 }
 
 .userlistTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   border-bottom: 1px solid $black_line;
+  font-weight: 600;
 
+  img {
+    width: 50px;
+    aspect-ratio: 1;
+  }
 }
 
 .user {

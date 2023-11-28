@@ -206,6 +206,7 @@ const Home = () => {
           )}
             <div className={style.messagesTop}>
               {socket.username}
+              <img src="./images/homeSection/info.svg" alt="" />
             </div>
           <Commands />
           <div ref={viewerRef} className={style.messages}>
@@ -231,10 +232,16 @@ const Home = () => {
                   );
                 })}
           </div>
-          <Input
-            selectedUser={selectedUser}
-            setSelectedUser={setSelectedUser}
-          />
+          <div className={style.inputMessages}>
+            <Input
+              selectedUser={selectedUser}
+              setSelectedUser={setSelectedUser}
+            />
+            <div>
+              <img src="images/homeSection/gallery.png" alt="" />
+              <img src="images/navbar/like.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
