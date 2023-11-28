@@ -1,5 +1,17 @@
+@import '@/styles/variables.scss';
+
+.section {
+  background-color: #fafafa;
+}
+
 .homeContainer {
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
   display: flex;
+  border: 1px solid $black_line;
+  background-color: white;
 
   & > div:nth-child(2) {
     display: flex;
@@ -12,13 +24,17 @@
 //     text-align: center;
 // }
 
+.messagesTop {
+  min-height: 50px;
+  border-bottom: 1px solid $black_line;
+}
+
 .messages {
   background-color: white;
-  height: 85vh;
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 20px;
   width: 100%;
-  border: 1px solid black;
   margin: 0 auto;
 }

@@ -43,6 +43,7 @@ const Input = ({ selectedUser, setSelectedUser }) => {
       className={style.input}
       type="text"
       onKeyDown={onKeyDown}
+      placeholder="Message..."
     />
   );
 };

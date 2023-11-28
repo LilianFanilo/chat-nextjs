@@ -45,28 +45,59 @@ const Login = () => {
     return finalClassname;
   };
 
+  const footerContentTop = [
+    "Meta",
+    "À propos",
+    "Blog",
+    "Emplois",
+    "Aide",
+    "API",
+    "Confidentialité",
+    "Conditions",
+    "Lieux",
+    "Instagram Lite",
+    "Threads",
+    "Importation des contacts et non-utilisateurs",
+    "Meta Verified",
+  ];
+
   return (
     <section>
       <main>
-        <article>
-          <div></div>
-          <div className={style.loginContainer}>
-            <h1 className={`${getClassname()}`}>Login Page</h1>
-            <p>Enter username</p>
-            <div className={style.inputContainer}>
-              <input
-                ref={inputRef}
-                type="text"
-                placeholder="username"
-                onKeyDown={onKeyDown}
-              />
-              <img src="./images/enterButton.gif" alt="" />
+        <article className={style.loginSection}>
+          <div className={style.phoneContainer}>
+            <div className={style.phoneScreen}>
+              <img src="" alt="" />
             </div>
-            {displayError()}
+          </div>
+          <div className={style.loginContainer}>
+            <div className={style.loginContent}>
+              <h1 className={`${getClassname()}`}>Login Page</h1>
+              <div className={style.inputContainer}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder="Nom d'utilisateur"
+                  onKeyDown={onKeyDown}
+                />
+                <input type="text" placeholder="Mot de passe" />
+                <button>Se connecter</button>
+              </div>
+              {displayError()}
+            </div>
           </div>
         </article>
       </main>
-      <footer></footer>
+      <footer>
+        <div>
+          <div>
+            <div>{footerContentTop.map((content) => {})}</div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </footer>
     </section>
   );
 };

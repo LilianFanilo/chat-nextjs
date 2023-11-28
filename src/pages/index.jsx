@@ -8,6 +8,7 @@ import style from "@/styles/index.module.scss";
 import Notification from "@/components/notification/Notification";
 import UserList from "@/components/userList/UserList";
 import Message from "@/components/message/Message";
+import Navbar from "@/components/navbar/Navbar";
 
 const Home = () => {
   const [selectedUser, setSelectedUser] = useState();
@@ -186,49 +187,57 @@ const Home = () => {
   }, [selectedUser]);
 
   return (
-    <div className={style.homeContainer}>
-      <UserList
-        users={users}
-        setUsers={setUsers}
-        setSelectedUser={setSelectedUser}
-        selectedUser={selectedUser}
-      />
-      <div>
-        {error && (
-          <Notification
-            title={error.title}
-            content={error.content}
-            onClose={() => setError(null)}
+    <section className={style.section}>
+      <Navbar />
+      <div className={style.homeContainer}>
+        <UserList
+          users={users}
+          setUsers={setUsers}
+          setSelectedUser={setSelectedUser}
+          selectedUser={selectedUser}
+        />
+        <div>
+          {error && (
+            <Notification
+              title={error.title}
+              content={error.content}
+              onClose={() => setError(null)}
+            />
+          )}
+            <div className={style.messagesTop}>
+              {socket.username}
+            </div>
+          <Commands />
+          <div ref={viewerRef} className={style.messages}>
+            {selectedUser
+              ? selectedUser.messages.map((message, key) => {
+                  return (
+                    <Message
+                      key={key}
+                      username={message.username}
+                      content={message.content}
+                      fromSelf={message.from === socket.userID}
+                    />
+                  );
+                })
+              : messages.map((message, key) => {
+                  return (
+                    <Message
+                      key={key}
+                      username={message.username}
+                      content={message.content}
+                      fromSelf={message.from === socket.userID}
+                    />
+                  );
+                })}
+          </div>
+          <Input
+            selectedUser={selectedUser}
+            setSelectedUser={setSelectedUser}
           />
-        )}
-
-        <Commands />
-        <div ref={viewerRef} className={style.messages}>
-          {selectedUser
-            ? selectedUser.messages.map((message, key) => {
-                return (
-                  <Message
-                    key={key}
-                    username={message.username}
-                    content={message.content}
-                    fromSelf={message.from === socket.userID}
-                  />
-                );
-              })
-            : messages.map((message, key) => {
-                return (
-                  <Message
-                    key={key}
-                    username={message.username}
-                    content={message.content}
-                    fromSelf={message.from === socket.userID}
-                  />
-                );
-              })}
         </div>
-        <Input selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
       </div>
-    </div>
+    </section>
   );
 };
 

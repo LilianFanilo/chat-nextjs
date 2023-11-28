@@ -27,6 +27,9 @@ const User = ({ user, selectedUser, setSelectedUser, resetNotification }) => {
         resetNotification(user);
       }}
     >
+
+      <span className={style.userImg}></span>
+
       {user.username}
 
       {user.hasNewMessages === true ? (

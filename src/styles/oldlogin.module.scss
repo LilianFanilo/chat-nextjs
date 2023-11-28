@@ -1,0 +1,88 @@
+.title {
+  -webkit-text-stroke: 2px green;
+  font-size: 20px;
+}
+
+.error {
+  -webkit-text-stroke: 2px red;
+  font-size: 60px;
+}
+
+.loginSection {
+  display: flex;
+  justify-content: center;
+
+  .phoneContainer {
+    background-image: url("/images/loginPage/home-phones.png");
+    height: 581.15px;
+    margin-bottom: 12px;
+    background-size: 468.32px 634.15px;
+    align-self: center;
+    flex-basis: 380.32px;
+    margin-right: 32px;
+    background-position: -46px 0;
+
+    .phoneScreen {
+      padding-top: 0;
+      margin-top: 27px;
+      border-bottom-width: 0;
+      margin-left: 112px;
+      padding-bottom: 0;
+      border-left-width: 0;
+      padding-left: 0;
+      flex-direction: column;
+      border-right-width: 0;
+      box-sizing: border-box;
+      border-top-width: 0;
+      display: flex;
+      padding-right: 0;
+    }
+  }
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 12px;
+  max-width: 350px;
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // row-gap: 10px;
+  // height: 100vh;
+
+  // h1 {
+  //   color: transparent;
+  // }
+
+  // p {
+  //   text-transform: uppercase;
+  // }
+
+  // img {
+  //   width: 70px;
+  //   height: auto;
+  // }
+
+  // .inputContainer {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+  // input[type="text"] {
+  //   all: unset;
+  //   background-color: white;
+  //   border: 2px solid black;
+  //   border-radius: 10px;
+  //   padding: 5px 15px;
+
+  //   &:focus {
+  //     border: 3px solid #2516c7;
+  //   }
+  // }
+}

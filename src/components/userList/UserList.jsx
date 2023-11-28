@@ -27,6 +27,9 @@ const UserList = ({ users, setUsers, selectedUser, setSelectedUser }) => {
 
   return (
     <div ref={listRef} className={style.userlist}>
+      <div className={style.userlistTop}>
+          Direct
+      </div>
       <div
         className={`${style.user} ${selectedUser ? "" : style.user__active}`}
         onClick={() => setSelectedUser(null)}
