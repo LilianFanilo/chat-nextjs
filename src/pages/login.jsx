@@ -7,11 +7,11 @@ const Login = () => {
   const inputRef = useRef();
   const { push } = useRouter();
 
-  console.log(inputRef);
+  // console.log(inputRef);
 
   const onKeyDown = (e) => {
     if (e.keyCode === 13) {
-      console.log(inputRef.current.value);
+      // console.log(inputRef.current.value);
 
       localStorage.setItem("username", inputRef.current.value);
       inputRef.current.value = "";
@@ -21,10 +21,10 @@ const Login = () => {
   };
 
   useEffect(() => {
-    console.log(typeof localStorage.getItem("error"));
+    // console.log(typeof localStorage.getItem("error"));
 
     if (localStorage.getItem("error") == 200) {
-      console.log("error is present");
+      // console.log("error is present");
 
       setError("Server is down atm");
     }

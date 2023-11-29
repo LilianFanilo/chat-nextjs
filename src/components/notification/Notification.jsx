@@ -3,7 +3,7 @@ import style from "./Notification.module.scss";
 
 const Notification = ({ title, content, onClose }) => {
   useEffect(() => {
-    console.log("on mounted");
+    // console.log("on mounted");
     setTimeout(() => {
       onClose();
     }, 4000);

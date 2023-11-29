@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   const onMessage = (message) => {
-    console.log("message received", message);
+    // console.log("message received", message);
     setMessages((oldMessages) => [...oldMessages, message]);
   };
 
@@ -52,12 +52,12 @@ const Home = () => {
     const filteredArray = [...users].filter((_user) =>
       _user.userID !== _userID ? true : false,
     );
-    console.log(filteredArray);
+    // console.log(filteredArray);
     setUsers(filteredArray);
   };
 
   const onConnectionError = (err) => {
-    console.log("err", err);
+    // console.log("err", err);
     localStorage.removeItem("username");
     localStorage.removeItem("sessionID");
     localStorage.setItem("error", 200);
@@ -65,18 +65,18 @@ const Home = () => {
   };
 
   const getUserAtInit = (_users) => {
-    console.log(_users);
+    // console.log(_users);
     setUsers(_users);
   };
 
   const scrollToBottom = () => {
-    console.log("scroll top", viewerRef.current.scrollTop);
+    // console.log("scroll top", viewerRef.current.scrollTop);
 
     viewerRef.current.scrollTop = viewerRef.current.scrollHeight;
   };
 
   const onError = ({ code, error }) => {
-    console.log(code, error);
+    // console.log(code, error);
 
     let title = "";
     let content = "";
@@ -98,17 +98,17 @@ const Home = () => {
   };
 
   const onPrivateMessage = ({ content, from, to, username }) => {
-    console.log(content, from, to, username);
+    // console.log(content, from, to, username);
     // check from which user the message came from
     const userMessagingIndex = users.findIndex(
       (_user) => _user.userID === from,
     );
 
-    console.log(userMessagingIndex);
+    // console.log(userMessagingIndex);
 
     const userMessaging = users.find((_user) => _user.userID === from);
 
-    console.log(userMessaging);
+    // console.log(userMessaging);
 
     if (!userMessaging) return;
 
@@ -183,7 +183,7 @@ const Home = () => {
   }, [messages, selectedUser]);
 
   useEffect(() => {
-    console.log(selectedUser);
+    // console.log(selectedUser);
   }, [selectedUser]);
 
   return (
