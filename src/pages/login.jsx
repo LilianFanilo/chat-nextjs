@@ -36,14 +36,14 @@ const Login = () => {
     }
   };
 
-  const getClassname = () => {
-    let finalClassname = `${style.title} `;
-    if (error !== "") {
-      finalClassname += `${style.error} `;
-    }
+  // const getClassname = () => {
+  //   let finalClassname = `${style.title} `;
+  //   if (error !== "") {
+  //     finalClassname += `${style.error} `;
+  //   }
 
-    return finalClassname;
-  };
+  //   return finalClassname;
+  // };
 
   const footerContentTop = [
     "Meta",
@@ -67,12 +67,15 @@ const Login = () => {
         <article className={style.loginSection}>
           <div className={style.phoneContainer}>
             <div className={style.phoneScreen}>
-              <img src="" alt="" />
+              <img className={style.screenshot_1} src="./images/screenshot1.png" alt="" />
+              <img className={style.screenshot_2} src="./images/screenshot2.png" alt="" />
+              <img className={style.screenshot_3} src="./images/screenshot3.png" alt="" />
+              <img className={style.screenshot_4} src="./images/screenshot4.png" alt="" />
             </div>
           </div>
           <div className={style.loginContainer}>
             <div className={style.loginContent}>
-              <h1 className={`${getClassname()}`}>Login Page</h1>
+              <img className={style.instalogo} src="./images/instalogo.png" alt="" />
               <div className={style.inputContainer}>
                 <input
                   ref={inputRef}
@@ -80,7 +83,7 @@ const Login = () => {
                   placeholder="Nom d'utilisateur"
                   onKeyDown={onKeyDown}
                 />
-                <input type="text" placeholder="Mot de passe" />
+                <input type="text" placeholder="Mot de passe" disabled/>
                 <button>Se connecter</button>
               </div>
               {displayError()}

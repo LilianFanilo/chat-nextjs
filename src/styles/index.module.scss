@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .section {
-  background-color: #fafafa;
+  background-color: $light_grey;
 }
 
 .homeContainer {
@@ -25,10 +25,15 @@
 // }
 
 .messagesTop {
+  position: relative;
   min-height: 50px;
   border-bottom: 1px solid $black_line;
 
   img {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     width: 42px;
     aspect-ratio: 1;
   }

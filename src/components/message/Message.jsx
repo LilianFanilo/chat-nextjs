@@ -6,7 +6,10 @@ const Message = ({ username, content, fromSelf }) => {
   const messageRef = useRef();
 
   useEffect(() => {
-    gsap.to(messageRef.current, {
+    gsap.fromTo(messageRef.current, {
+      opacity: 0,
+      x: 10,
+    },{
       opacity: 1,
       x: 0,
     });

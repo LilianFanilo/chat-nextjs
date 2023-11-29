@@ -18,8 +18,13 @@
   input {
     all: unset;
     border: 1px solid $black_line;
-    background-color: #fafafa;
+    background-color: $light_grey;
     border-radius: 2px;
+    padding: 2px 0;
+
+    &::placeholder {
+      text-align: center;
+    }
   }
 
 

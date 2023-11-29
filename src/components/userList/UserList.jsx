@@ -34,7 +34,7 @@ const UserList = ({ users, setUsers, selectedUser, setSelectedUser }) => {
         <img src="./images/homeSection/pen.svg" alt="" />
       </div>
       <div
-        className={`${style.user} ${selectedUser ? "" : style.user__active}`}
+        className={`${style.generalHub} ${selectedUser ? "" : style.generalHub__active}`}
         onClick={() => setSelectedUser(null)}
       >
         GENERAL
