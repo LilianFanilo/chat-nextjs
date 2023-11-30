@@ -1,24 +1,68 @@
-.homeContainer {
-    display: flex;
+@import '@/styles/variables.scss';
 
-    & > div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        width: -webkit-fill-available;
-    }
+.section {
+  background-color: $light_grey;
+}
+
+.homeContainer {
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  border: 1px solid $black_line;
+  background-color: white;
+
+  & > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+  }
 }
 
 // .homeTitle {
 //     text-align: center;
 // }
 
+.messagesTop {
+  position: relative;
+  min-height: 50px;
+  border-bottom: 1px solid $black_line;
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 42px;
+    aspect-ratio: 1;
+  }
+}
+
 .messages {
-    background-color: white;
-    height: 85vh;
-    overflow-y : scroll;
-    overflow-x: hidden;
-    padding: 20px;
-    width: 100%;
-    border: 1px solid black;
-    margin: 0 auto;
+  background-color: white;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.inputMessages {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  div {
+    position: absolute;
+    top: 25px;
+    right: 8%;
+
+    img {
+      width: 50px;
+      aspect-ratio: 1;
+    }
+  }
 }

@@ -1,14 +1,16 @@
-.input {
-    all: unset;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 5px 15px;
-    width: 80%;
-    margin: 20px auto;
-    
-    &:focus {
-        border: 3px solid #2516c7;
-    }
+@import '@/styles/variables.scss';
 
+.input {
+  all: unset;
+  background-color: white;
+  border: 2px solid $black_line;
+  border-radius: 25px;
+  padding: 5px 15px;
+  width: 85%;
+  height: 50px;
+  margin: 20px auto;
+
+  &:focus {
+    border: 3px solid #2516c7;
+  }
 }

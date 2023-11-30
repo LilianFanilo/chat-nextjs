@@ -1,24 +1,34 @@
+@import '@/styles/variables.scss';
+
 .user {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 20px;
-    width: 100%;
-    height: 45px;
-    transition: background-color ease 0.5s;
-    color: white;
-    opacity: 0;
-    transform: translateX(-100%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 0 20px ;
+  height: 75px;
+  transition: background-color ease 0.5s;
+  color: $black_color;
+  opacity: 0;
+  transform: translateX(-100%);
+  column-gap: 10px;
 
-    &__active {
-        background-color: rgb(179, 179, 179);
-    }
+  &__active {
+    background-color: $grey_bg;
+  }
 
-    .notification {
-        width: 15px;
-        height: 15px;
-        background-color: red;
-        border-radius: 50%;
-    }
+  .notification {
+    width: 15px;
+    height: 15px;
+    background-color: #0391EB;
+    border-radius: 50%;
+  }
+
+  .userImg {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+  }
 }

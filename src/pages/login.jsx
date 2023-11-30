@@ -1,74 +1,106 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import style from "@/styles/login.module.scss"
+import style from "@/styles/login.module.scss";
 
 const Login = () => {
-    const [error,setError] = useState({});
-    const inputRef = useRef();
-    const {push} = useRouter();
+  const [error, setError] = useState({});
+  const inputRef = useRef();
+  const { push } = useRouter();
 
-    console.log(inputRef);
+  // console.log(inputRef);
 
-    const onKeyDown = (e) => {
-        if (e.keyCode === 13){
-            console.log(inputRef.current.value);
+  const onKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      // console.log(inputRef.current.value);
 
-            localStorage.setItem("username", inputRef.current.value);
-            inputRef.current.value = "";
+      localStorage.setItem("username", inputRef.current.value);
+      inputRef.current.value = "";
 
-            push('/');
-        }
+      push("/");
     }
+  };
 
-    useEffect(() => {
-        console.log(typeof localStorage.getItem("error"));
+  useEffect(() => {
+    // console.log(typeof localStorage.getItem("error"));
 
-        if(localStorage.getItem('error') == 200) {
-            console.log("error is present");
+    if (localStorage.getItem("error") == 200) {
+      // console.log("error is present");
 
-            setError('Server is down atm')
-        }
-    }, []);
-
-    const displayError = () => {
-        if ( error !== "") {
-            return <h2>error</h2>
-        }
+      setError("Server is down atm");
     }
+  }, []);
 
-    const getClassname = () => {
-        let finalClassname = `${style.title} `;
-        if (error !== "") {
-            finalClassname += `${style.error} `;
-        }
-
-        return finalClassname;
+  const displayError = () => {
+    if (error !== "") {
+      return <h2>error</h2>;
     }
+  };
 
-    return (
-        <section>
-            <main>
-                <article>
-                    <div>
+  // const getClassname = () => {
+  //   let finalClassname = `${style.title} `;
+  //   if (error !== "") {
+  //     finalClassname += `${style.error} `;
+  //   }
 
-                    </div>
-                    <div className={style.loginContainer}>
-            <h1 className={`${getClassname()}`} >Login Page</h1>
-            <p>Enter username</p>
-            <div className={style.inputContainer}>
-                <input ref={inputRef} type="text" placeholder="username" onKeyDown={onKeyDown}/>
-                <img src="./images/enterButton.gif" alt="" />
+  //   return finalClassname;
+  // };
+
+  const footerContentTop = [
+    "Meta",
+    "À propos",
+    "Blog",
+    "Emplois",
+    "Aide",
+    "API",
+    "Confidentialité",
+    "Conditions",
+    "Lieux",
+    "Instagram Lite",
+    "Threads",
+    "Importation des contacts et non-utilisateurs",
+    "Meta Verified",
+  ];
+
+  return (
+    <section>
+      <main>
+        <article className={style.loginSection}>
+          <div className={style.phoneContainer}>
+            <div className={style.phoneScreen}>
+              <img className={style.screenshot_1} src="./images/screenshot1.png" alt="" />
+              <img className={style.screenshot_2} src="./images/screenshot2.png" alt="" />
+              <img className={style.screenshot_3} src="./images/screenshot3.png" alt="" />
+              <img className={style.screenshot_4} src="./images/screenshot4.png" alt="" />
             </div>
-            {displayError()}
+          </div>
+          <div className={style.loginContainer}>
+            <div className={style.loginContent}>
+              <img className={style.instalogo} src="./images/instalogo.png" alt="" />
+              <div className={style.inputContainer}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder="Nom d'utilisateur"
+                  onKeyDown={onKeyDown}
+                />
+              </div>
+              {displayError()}
+            </div>
+          </div>
+        </article>
+      </main>
+      <footer>
+        <div>
+          <div>
+            <div>{footerContentTop.map((content) => {})}</div>
+          </div>
+          <div>
+            <div></div>
+          </div>
         </div>
-                </article>
-            </main>
-            <footer>
-
-            </footer>
-        </section>
-
-    )
-}
+      </footer>
+    </section>
+  );
+};
 
 export default Login;

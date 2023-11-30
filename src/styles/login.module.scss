@@ -1,49 +1,76 @@
-.title {
-    -webkit-text-stroke: 2px green;
-    font-size: 20px;
-}
+@import '@/styles/variables.scss';
 
-.error {
-    -webkit-text-stroke: 2px red;
-    font-size: 60px;
-}
+.loginSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
 
-.loginContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px;
-    height: 100vh;
+  .phoneContainer {
+    background-image: url("/images/loginPage/home-phones.png");
+    height: 581.15px;
+    margin-bottom: 12px;
+    background-size: 468.32px 634.15px;
+    align-self: center;
+    flex-basis: 380.32px;
+    margin-right: 32px;
+    background-position: -46px 0;
 
-    h1 {
-        color: transparent;
-    }
-
-    p {
-        text-transform: uppercase;
+    .phoneScreen {
+      position: relative;
+      height: 1px;
+      margin-top: 27px;
     }
 
     img {
-        width: 70px;
-        height: auto;
+      position: absolute;
+      top: 0;
+      right: 17px;
+      width: 250px;
+      height: 538.34px;
+    }
+  }
+
+  .loginContainer {
+    width: 350px;
+    display: flex;
+    align-items: center;
+
+
+    .loginContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 25px;
+      border: 1px solid $black_line;
+      padding: 35px;
+      width: 100%;
+
+      .instalogo {
+        width: 150px;
+      }
+
     }
 
     .inputContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      width: 100%;
 
-    input[type="text"] {
-            all: unset;
-            background-color: white;
-            border: 2px solid black;
-            border-radius: 10px;
-            padding: 5px 15px;
-        
-            &:focus {
-                border: 3px solid #2516c7;
-            }
+      input {
+        all: unset;
+        border: 1px solid $black_line;
+        background-color: $light_grey;
+        padding: 8px;
+      }
+
+      button {
+        background-color: #0095f6;
+        color: white;
+        border: none;
+        padding: 5px 0;
+        border-radius: 7px;
+      }
     }
+  }
 }

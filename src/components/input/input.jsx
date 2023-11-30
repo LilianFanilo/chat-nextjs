@@ -9,7 +9,7 @@ const Input = ({ selectedUser, setSelectedUser }) => {
   const onKeyDown = (e) => {
     // detect when user press enter
     if (inputRef.current.value.length !== 0 && e.keyCode === 13) {
-      console.log(inputRef.current.value);
+      // console.log(inputRef.current.value);
 
       if (selectedUser) {
         socket.emit("private message", {
@@ -43,6 +43,7 @@ const Input = ({ selectedUser, setSelectedUser }) => {
       className={style.input}
       type="text"
       onKeyDown={onKeyDown}
+      placeholder="Message..."
     />
   );
 };

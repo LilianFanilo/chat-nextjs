@@ -1,8 +1,35 @@
-.message {
-    padding: 5px 0;
+@import '@/styles/variables.scss';
 
-    &__self {
-        text-align: right;
-        transform: translateX(100px);
+.usersMessages {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.message {
+  display: flex;
+  padding: 5px 0;
+
+  span {
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: 1px solid $grey_bg;
+  }
+
+
+  &__self {
+    justify-content: flex-end;
+
+    span {
+      text-align: right;
+      padding: 15px 20px;
+      border-radius: 25px;
+      background-color: $grey_bg;
     }
+  }
 }

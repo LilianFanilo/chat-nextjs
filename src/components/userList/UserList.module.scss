@@ -1,26 +1,73 @@
+@import '@/styles/variables.scss';
+
 .userlist {
-    display: flex;
-    flex-direction: column;
-    background-color: #202123;
-    width: 300px;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 100%;
+  border-right: 1px solid $black_line;
+  overflow: hidden;
+}
+
+.userlistTop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid $black_line;
+  font-weight: 600;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 49px;
+    aspect-ratio: 1;
+  }
 }
 
 .user {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 20px;
-    width: 236px;
-    height: 44px;
-    border-radius: 6px;
-    transition: background-color ease 0.5s;
-    color: white;
-    opacity: 0;
-    transform: translateX(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  width: 236px;
+  height: 44px;
+  border-radius: 6px;
+  transition: background-color ease 0.5s;
+  color: $black_color;
+  opacity: 0;
+  transform: translateX(-100%);
 
-    &__active {
-        background-color: hsla(240, 15%, 94%, 0.2);
+  &__active {
+    background-color: hsla(240, 15%, 94%, 0.2);
+  }
+}
+
+.generalHub {
+  position: relative;
+  font-weight: 600;
+  width: 100%;
+  border-bottom : 1px solid $black_line;
+  padding: 15px 25px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    transition: all ease 0.5s;
+  }
+
+  &__active {
+    &::after {
+      width: 120px;
     }
+  }
 }
