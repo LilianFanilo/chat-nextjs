@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import style from "@/styles/login.module.scss";
+import Head from "next/head";
 
 const Login = () => {
   const [error, setError] = useState({});
