@@ -9,6 +9,7 @@ import Notification from "@/components/notification/Notification";
 import UserList from "@/components/userList/UserList";
 import Message from "@/components/message/Message";
 import Navbar from "@/components/navbar/Navbar";
+import Head from 'next/head';
 
 const Home = () => {
   const [selectedUser, setSelectedUser] = useState();
@@ -187,6 +188,11 @@ const Home = () => {
   }, [selectedUser]);
 
   return (
+    <>
+    <Head>
+      <title>Chat Next.js - Instagram </title>
+      <link rel="shortcut icon" href="./logo_insta.png" type="image/x-icon" />
+    </Head>
     <section className={style.section}>
       <Navbar />
       <div className={style.homeContainer}>
@@ -245,6 +251,7 @@ const Home = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

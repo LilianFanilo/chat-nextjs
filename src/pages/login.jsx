@@ -62,6 +62,10 @@ const Login = () => {
   ];
 
   return (
+    <>
+    <Head>
+      <title>Chat Next.js - Connexion </title>
+    </Head>
     <section>
       <main>
         <article className={style.loginSection}>
@@ -100,6 +104,7 @@ const Login = () => {
         </div>
       </footer>
     </section>
+    </>
   );
 };
 
