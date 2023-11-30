@@ -32,6 +32,9 @@
 
   .loginContainer {
     width: 350px;
+    display: flex;
+    align-items: center;
+
 
     .loginContent {
       display: flex;
@@ -40,6 +43,7 @@
       row-gap: 25px;
       border: 1px solid $black_line;
       padding: 35px;
+      width: 100%;
 
       .instalogo {
         width: 150px;

@@ -83,8 +83,6 @@ const Login = () => {
                   placeholder="Nom d'utilisateur"
                   onKeyDown={onKeyDown}
                 />
-                <input type="text" placeholder="Mot de passe" disabled/>
-                <button>Se connecter</button>
               </div>
               {displayError()}
             </div>

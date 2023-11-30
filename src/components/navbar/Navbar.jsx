@@ -7,9 +7,6 @@ const Navbar = () => {
         <img className={style.logo} src="./images/instalogo.png" alt="" />
       </div>
       <div>
-        <input type="text" name="" id="" placeholder="Search" disabled/>
-      </div>
-      <div>
         <img src="./images/navbar/home.png" alt=""/>
         <img src="./images/navbar/message.png" alt="" />
         <img src="./images/navbar/search.png" alt="" />
