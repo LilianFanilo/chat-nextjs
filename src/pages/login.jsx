@@ -46,26 +46,11 @@ const Login = () => {
   //   return finalClassname;
   // };
 
-  const footerContentTop = [
-    "Meta",
-    "À propos",
-    "Blog",
-    "Emplois",
-    "Aide",
-    "API",
-    "Confidentialité",
-    "Conditions",
-    "Lieux",
-    "Instagram Lite",
-    "Threads",
-    "Importation des contacts et non-utilisateurs",
-    "Meta Verified",
-  ];
-
   return (
     <>
     <Head>
       <title>Chat Next.js - Connexion </title>
+      <link rel="shortcut icon" href="./logo_insta.png" type="image/x-icon" />
     </Head>
     <section>
       <main>
