@@ -74,21 +74,11 @@ const Login = () => {
                   onKeyDown={onKeyDown}
                 />
               </div>
-              {displayError()}
+              {/* {displayError()} */}
             </div>
           </div>
         </article>
       </main>
-      <footer>
-        <div>
-          <div>
-            <div>{footerContentTop.map((content) => {})}</div>
-          </div>
-          <div>
-            <div></div>
-          </div>
-        </div>
-      </footer>
     </section>
     </>
   );
